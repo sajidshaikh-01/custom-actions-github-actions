@@ -1,0 +1,11 @@
+name: "Hello Docker Action"
+description: "Simple Docker-based GitHub Action"
+inputs:
+  name:
+    description: "Name of the user"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.name }}
