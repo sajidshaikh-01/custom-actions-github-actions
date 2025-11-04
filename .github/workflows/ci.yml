@@ -1,0 +1,12 @@
+name: Run CI using Composite Action
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use custom composite action
+        uses: ./.github/actions/ci-build
+        with:
+          node-version: "20"
