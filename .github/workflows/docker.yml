@@ -1,0 +1,15 @@
+name: Run Docker Action
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run custom Docker Action
+        uses: ./.github/actions/hello-docker
+        with:
+          name: "Sajid Shaikh"
